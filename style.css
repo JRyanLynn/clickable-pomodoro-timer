@@ -99,8 +99,35 @@ p {
     outline: none;
 }
 
-.cycles {
-    padding-top: 50px;
-    padding-left: 50px;
+#cycles {
+    position: absolute;
+    align-items: center;
+    margin-top: 20px; 
+    width: 320px;
+    height: 100px;
 }
+
+.cycle-text {
+    font-family: Verdana;
+    width: auto;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#counter {
+    width: auto;
+    height: auto;
+    margin-left: -10px;
+}
+
+#cycle-text {
+    margin-left: 50px;
+    width: auto;
+    height: auto;
+}
+
+
+
 

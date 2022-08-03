@@ -19,6 +19,7 @@ let breakButton = document.getElementById('break-button');
 let breakContainer = document.querySelector('.break-container');
 let workContainer = document.querySelector('.work-container');
 
+
 //audio element using native JS function
 var ring = new Audio ("https://sampleswap.org/samples-ghost/SOUND%20EFFECTS%20and%20NOISES/Alarm%20Sounds/209[kb]star-trek-bridge.wav.mp3");
 
@@ -40,6 +41,9 @@ if (seconds.innerText != 0) {    //decriments seconds
         seconds.innerText --;
         breakContainer.style.display = 'none';
         workContainer.style.display = 'block';
+        breakButton.style.backgroundColor = '#BDBDBD';
+        workButton.style.backgroundColor = '#4169E1';
+
         if (seconds.innerText < 10) {
             seconds.innerHTML = '0' + seconds.innerText;
         }
@@ -80,10 +84,12 @@ if (minutes.innerText == 0 && seconds.innerText == 0 && breakMin.innerText == 0 
     resetTimer();
     //incriment counter if one full cycle is done
     document.getElementById('cycles').innerHTML++;
+
+    //ends timer
     clearInterval(startTimer);
     ring.play();
     breakButton.style.backgroundColor = '#BDBDBD';
-    workButton.style.backgroundColor = '#4169E1';
+    workButton.style.backgroundColor = '#4169E1';   
     return;
 }
 }
@@ -140,5 +146,3 @@ breakButton.addEventListener('click', () => {
     workButton.style.backgroundColor = '#BDBDBD';
     breakButton.style.backgroundColor = '#4169E1';
  });
-
-
